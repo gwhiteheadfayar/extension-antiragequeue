@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Chess.com Rage-Requeue Preventer",
+  "version": "1.0",
+  "description": "Prevents rage re-queueing on Chess.com by implementing a cooldown after losses.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "https://www.chess.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.chess.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

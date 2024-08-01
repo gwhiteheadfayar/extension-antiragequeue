@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chess.com Rage-Requeue Preventer Settings</title>
+  <style>
+    body { width: 300px; padding: 10px; }
+    label { display: block; margin-top: 10px; }
+    #timerDisplay { font-size: 18px; font-weight: bold; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Settings</h2>
+  <label for="cooldownTime">Cooldown time (minutes):</label>
+  <input type="number" id="cooldownTime" min="1" value="15">
+  
+  <label for="gamesToCooldown">Games before cooldown:</label>
+  <input type="number" id="gamesToCooldown" min="1" value="1">
+  
+  <button id="saveSettings">Save Settings</button>
+  
+  <div id="timerDisplay">Cooldown: Not active</div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
